@@ -1,5 +1,6 @@
 Sub init()
     m.video = m.top.findNode("splashVideo")
+    
     playSplashVideo()
 End Sub
 
