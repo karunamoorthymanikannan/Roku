@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WeatherData" extends="ContentNode">
+	<interface>
+		<field id="wetherTitle" type="string" value="Coentent Title" />
+		<field id="weatherIcon" type="string" value="pkg:/images/placeholder.png" />
+		<field id="weatherTemp" type="string" value="" />
+		<field id="weatherSky" type="string" value="" />
+		<field id="weatherFeels" type="string" value="" />
+		<field id="weatherPrecip" type="string" value="" />
+		<field id="weatherHigh" type="string" value="" />
+		<field id="weatherLow" type="string" value="" />
+	</interface>
+</component>

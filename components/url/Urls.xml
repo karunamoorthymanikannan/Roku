@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Urls" extends="Task">
+	<interface>
+		<field id="developmentHost" type="string" value="https://stage.www.nbcnewyork.com"/>
+		<field id="productionHost" type="string" value="https://www.nbcnewyork.com"/>
+		<field id="hostUrl" type="string" value="https://stage.www.nbcnewyork.com"/>
+		<field id="isHeaderNeed" type="boolean" value="true" />
+	</interface>
+	<!-- <script type="text/brightscript" uri="pkg:/components/urls/Urls.brs" /> -->
+</component>

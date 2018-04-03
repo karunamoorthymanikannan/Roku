@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LoadSplashVideo" extends="Group">
+	<script type="text/brightscript"
+		uri="pkg:/components/loadSplashVideo/LoadSplashVideo.brs" />
+	<interface>
+		<field id="videoStatusChange" type="boolean" alwaysNotify="true" />
+	</interface>
+
+	<children>
+		<Video id="splashVideo" width="1920" height="1080" />
+	</children>
+</component>

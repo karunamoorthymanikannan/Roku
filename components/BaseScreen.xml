@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="BaseScreen" extends="Scene">
+	<script type="text/brightscript" uri="pkg:/components/BaseScreen.brs" />
+	<script type="text/brightscript" uri="pkg:/components/utils/HomeHelper.brs" />
+	<script type="text/brightscript" uri="pkg:/components/utils/Constant.brs" />
+</component>

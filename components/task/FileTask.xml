@@ -1,0 +1,11 @@
+<component name="FileTask" extends="Task">
+	<interface>
+		<field id="fileName" type="string" alwaysNotify="true" value="config"
+			onChange="updateDefaultPlaceHolder" />
+		<field id="inputData" type="assocarray" alwaysNotify="true" />
+		<field id="responseData" type="assocarray" alwaysNotify="true" />
+		<field id="responseNode" type="node" alwaysNotify="true" />
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/task/FileTask.brs" />
+</component>

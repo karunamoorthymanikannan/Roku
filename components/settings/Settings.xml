@@ -1,0 +1,15 @@
+<component name="Settings" extends="LabelList">
+	<interface>
+		<field id="defaultPlaceHolder" type="string" alwaysNotify="true"
+			value="pkg:/images/placeholder.png" onChange="updateDefaultPlaceHolder" />
+		<field id="focusPercent" type="float" onChange="updateFocus"
+			alwaysNotify="true" />
+		<field id="badgeContent" type="string" alwaysNotify="true"
+			value="" onChange="updateBadgeContent" />
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/settings/Settings.brs" />
+
+	<children>
+	</children>
+</component>

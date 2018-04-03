@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SectionTask" extends="BaseAPI">
+	<interface>
+		<field id="sectionPath" type="string" value="/api/1/ott/?path=/navigation/ott/news%26endpoint=section%26platform=appletv"/>
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/task/section/SectionRequest.brs" />
+</component>

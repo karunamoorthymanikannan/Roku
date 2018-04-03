@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="MainScreen" extends="BaseScreen">
+	<script type="text/brightscript" uri="pkg:/components/MainScreen.brs" />
+	<children>
+		<Rectangle id="bgOverlay" width="1920" height="1080" color="0x0000FF80" />
+		<Poster id="primaryImage" width="1920" height="1080" loadWidth="1920"
+			loadHeight="1080" uri="pkg:/images/splash_720p.png" loadDisplayMode="scaleToFill" />
+		<Rectangle id="bgOverlay" width="1920" height="1080" color="0x00000000"
+			translation="[0, 0]">
+			<HeaderLayout id="headerLayout" translation="[0,0]" />
+			<Settings id="settings" translation="[80,280]" visible="false" />
+			<SectionList id="sectionList" translation="[80,180]" />
+			<Video id="weatherVideo" width="1920" height="1080" opacity="0.2" />
+			<Weather id="weather" translation="[0,180]" visible="false"
+				focusable="true" />
+			<!-- <LoadSplashVideo id="loadSplashVideo" visible="false" /> -->
+
+			<LoadingSpinner id="spinner" visible="false" />
+			<Animation id="hideNavigationMenuAnimation" duration=".3"
+				easeFunction="linear">
+				<Vector2DFieldInterpolator id="myInterp2"
+					key="[0.0, 1.0]" keyValue="[ [0.0, 0.0] , [0.0, -120.0] ]"
+					fieldToInterp="headerLayout.translation" />
+			</Animation>
+			<Animation id="showNavigationMenuAnimation" duration=".3"
+				easeFunction="linear">
+				<Vector2DFieldInterpolator id="myInterp2"
+					key="[0.0, 1.0]" keyValue="[ [0.0, -120.0] , [0.0, 0.0]]"
+					fieldToInterp="headerLayout.translation" />
+			</Animation>
+		</Rectangle>
+		<Animation id="slideupWeatherAnimation" duration=".6"
+			easeFunction="linear">
+			<Vector2DFieldInterpolator id="myInterp2"
+				key="[0.0, 1.0]" keyValue="[ [0.0, 0.0] , [0.0, -540.0] ]"
+				fieldToInterp="bgOverlay.translation" />
+		</Animation>
+		<Animation id="slidedownWetharAnimation" duration=".6"
+			easeFunction="linear">
+			<Vector2DFieldInterpolator id="myInterp2"
+				key="[0.0, 1.0]" keyValue="[ [0.0, -540.0] , [0.0, 0.0]]"
+				fieldToInterp="bgOverlay.translation" />
+		</Animation>
+	</children>
+</component>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="HeaderLayout" extends="Group">
+	<interface>
+		<field id="headerPrimaryIcon" type="string" alwaysNotify="true"
+			value="pkg:/images/icon_focus_hd.png" onChange="updateHeaderPrimaryIcon" />
+		<field id="headerSecondaryIcon" type="string" alwaysNotify="true"
+			value="pkg:/images/icon_focus_hd.png" onChange="updateSecondaryPrimaryIcon" />
+		<field id="menuFocuesdItem" type="integer" alwaysNotify="true"
+			value="0" />
+		<field id="menuUnFocuesdItem" type="integer" alwaysNotify="true"
+			value="0" />
+		<field id="setFocus" type="boolean" onChange="setViewFocus"
+			alwaysNotify="true" />
+		<field id="configData" type="assocarray" alwaysNotify="true"
+			onChange="updateHeaderMenu" />
+		<field id="headerData" type="assocarray" alwaysNotify="true"
+			onChange="updateHeaderDetails" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/navigation/HeaderLayout.brs" />
+	<children>
+		<Rectangle height="120" width="1920" color="0x00000010">
+			<LayoutGroup layoutDirection="horiz" itemSpacings="[22]"
+				translation="[80,20]">
+				<Poster id="primaryImage" width="160" height="80"
+					uri="pkg:/images/nbc_icon.jpg" loadDisplayMode="scaleToFill" />
+				<Rectangle color="0x00000000">
+					<Poster id="secondaryImage" width="200" height="80" visible="false"
+						uri="pkg:/images/nbc_icon.jpg" loadDisplayMode="scaleToFill" />
+					<Rectangle color="0x00000000" id="settingsNotFocused">
+						<Poster id="serverLogo" width="94" height="90"
+							loadDisplayMode="scaleToFill" />
+						<LayoutGroup layoutDirection="vert" vertAlignment="top"
+							translation="[95,0]">
+							<Label id="temp" color="0xFFFFFF" width="140">
+								<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="34" />
+							</Label>
+
+							<Label id="sky" width="240" color="0xFFFFFF">
+								<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="22" />
+							</Label>
+						</LayoutGroup>
+					</Rectangle>
+				</Rectangle>
+			</LayoutGroup>
+
+			<MarkupGrid id="menuList" itemComponentName="menuListItem"
+				itemSize="[260, 60]" itemSpacing="[10, 0]" translation="[800, 30]"
+				drawFocusFeedback="false" numRows="1" vertFocusAnimationStyle="floatingFocus"
+				numColumns="4" />
+		</Rectangle>
+	</children>
+
+</component>

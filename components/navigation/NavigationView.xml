@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="menuListItem" extends="Group">
+	<interface>
+		<field id="itemContent" type="node" onChange="itemContentChanged" />
+		<field id="focusPercent" type="float" onChange="updateFocus" />
+		<field id="rowHasFocus" type="boolean" alwaysNotify="true" />
+		<field id="rowFocusPercent" type="float" onChange="updateFocus" />
+	</interface>
+	<script type="text/brightscript">
+<![CDATA[ 
+	Function itemContentChanged() as void
+		itemData = m.top.itemContent
+		m.titleText.text = itemData.title
+		m.titleFocusText.text =itemData.title
+	End function
+  
+	Function init() as void 
+		m.titleText  = m.top.findNode("titleText")
+		m.titleFocusText  = m.top.findNode("titleFocusText")
+		m.indicationImage = m.top.findNode("indicationImage")
+	End function
+
+	Function updateFocus() As Void
+		m.titleFocusText.opacity = m.top.focusPercent
+		m.indicationImage.opacity = m.top.focusPercent
+	End Function
+]]>
+	</script>
+
+	<children>
+		<Rectangle color="0x00000010">
+			<Label id="titleText" vertAlign="center" horizAlign="center"
+				font="font:MediumSystemFont" width="260" height="60" color="0xFFFFFF80">
+			</Label>
+			
+			<Label id="titleFocusText" vertAlign="center" horizAlign="center"
+				font="font:MediumBoldSystemFont" opacity="0.0" width="260" height="60"
+				color="0xFFFFFF">
+			</Label>
+			<Poster id="indicationImage" width="260" uri="pkg:/images/nav_bg.png" opacity="0.0"
+				loadDisplayMode="scaleToFill" />
+		</Rectangle>
+	</children>
+</component>

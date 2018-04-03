@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WeatherTask" extends="BaseAPI">
+	<interface>
+		<field id="weather" type="assocarray" />
+		<field id="weatherResponseData" type="assocarray" alwaysNotify="true" />
+		<field id="weatherStoryData" type="assocarray" alwaysNotify="true" />
+		<field id="weatherVideoData" type="assocarray" alwaysNotify="true" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/task/weather/WeatherRequest.brs" />
+</component>

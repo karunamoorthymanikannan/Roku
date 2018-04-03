@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Weather" extends="Group">
+	<interface>
+		<field id="updateDayData" type="assocarray" alwaysNotify="true"
+			onChange="notifyDayData" />
+		<field id="updateVideoData" type="assocarray" alwaysNotify="true"
+			onChange="notifyVideoData" />
+		<field id="updateStoryData" type="assocarray" alwaysNotify="true"
+			onChange="notifyStoryData" />
+		<field id="updateWeatherFocus" type="boolean" alwaysNotify="true"
+			value="false" onChange="notifyWeatherFocus" />
+		<field id="playWeatherVideo" type="String" alwaysNotify="true"
+			value="play" onChange="playWeatherVideo" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/weather/Weather.brs" />
+	<children>
+		<Rectangle width="1840" height="800" color="0x0000FF80"
+			translation="[40, 0]">
+			<Poster id="weatherVideoImage" width="840" height="500"
+				focusable="true" translation="[20, 40]" loadWidth="840" loadHeight="500"
+				uri="pkg:/images/placeholder.png" loadDisplayMode="scaleToFill" />
+
+			<Label id="weatherVideoTitle" horizAlign="left" color="0xFFFFFF"
+				translation="[20, 560]" vertAlign="center" width="800">
+				<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="32" />
+			</Label>
+			<Poster id="weatherStoryImage" width="220" height="340"
+				translation="[890, 20]" loadWidth="220" loadHeight="340"
+				uri="pkg:/images/placeholder.png" loadDisplayMode="scaleToFill" />
+			<Rectangle color="0x00000000" width="580" height="300"
+				translation="[890, 380]">
+				<LayoutGroup layoutDirection="vert" vertAlignment="top"
+					translation="[20,10]">
+					<Label id="weatherStoryTitle" horizAlign="left" color="0xFFFFFF"
+						vertAlign="center" width="540">
+						<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="32" />
+					</Label>
+					<Label id="weatherStorySummary" horizAlign="left" width="540"
+						color="0xFFFFFF" wrap="true" maxLines="3" vertAlign="center" text="34">
+						<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="21" />
+					</Label>
+				</LayoutGroup>
+			</Rectangle>
+			<WeatherInfo id="rightNow" translation="[1120,20]" />
+			<WeatherInfo id="tonight" translation="[1480,20]" />
+			<WeatherInfo id="tomorrow" translation="[1480,320]" />
+		</Rectangle>
+		<LayoutGroup layoutDirection="horiz" vertAlignment="top"
+			translation="[60,120]">
+			<Label horizAlign="left" color="0xFFFFFF" vertAlign="center"
+				width="420" height="100" text="WHAT TO EXPECT">
+				<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="48" />
+			</Label>
+			<Label text="New York, NY" horizAlign="left" height="100"
+				width="240" color="0xFFFF33" wrap="true" maxLines="3" vertAlign="center">
+				<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="32" />
+			</Label>
+			<Label text="updated on:" horizAlign="left" height="100" width="220"
+				color="0xFFFFFF" wrap="true" maxLines="3" vertAlign="center">
+				<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="28" />
+			</Label>
+		</LayoutGroup>
+		<Label horizAlign="left" color="0xFFFFFF" vertAlign="center"
+			translation="[60,820]" width="580" height="100" text="10 DAY FORECAST">
+			<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="48" />
+		</Label>
+		<MarkupGrid id="allDayForecast" itemComponentName="WeatherForecastView"
+			itemSize="[160, 480]" itemSpacing="[10, 0]" translation="[60, 940]"
+			drawFocusFeedback="false" numRows="1" vertFocusAnimationStyle="floatingFocus"
+			numColumns="10" />
+	</children>
+</component>

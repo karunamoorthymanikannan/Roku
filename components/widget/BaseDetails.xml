@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="BaseDetails" extends="Group">
+	<interface>
+		<field id="updateDetailsScreen" type="Node" alwaysNotify="true"
+			onChange="notifyDetailsContent" />
+		<field id="closedDetailsScreen" type="string" alwaysNotify="true" />
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/widget/BaseDetails.brs" />
+</component>

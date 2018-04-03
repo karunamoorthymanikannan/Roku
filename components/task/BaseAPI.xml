@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseAPI" extends="Task">
+	<interface>
+		<field id="taskId" type="integer" />
+		<field id="inputData" type="assocarray" />
+		
+		<field id="isHeaderNeed" type="boolean" value="true" />
+		<field id="hostUrl" type="string" value="https://stage.www.nbcnewyork.com" />
+		
+		<field id="responseString" type="string" value="" />
+		<field id="responseCode" type="integer" value="404" />
+		<field id="responseData" type="assocarray" alwaysNotify="true" />
+		<field id="responseNode" type="node" alwaysNotify="true"  />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/task/BaseAPI.brs" />
+	<script type="text/brightscript" uri="pkg:/components/utils/Constant.brs" />
+</component>

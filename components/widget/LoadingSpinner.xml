@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="LoadingSpinner" extends="BusySpinner">
+	<script type="text/brightscript">
+		<![CDATA[ 	
+			Function init() As Void
+			 	m.top.translation = [893, 473]
+			    m.top.poster.uri = "pkg:/images/spinner.png"
+			    m.top.spinInterval = 0.75
+			End Function
+		]]>
+	</script>
+</component>

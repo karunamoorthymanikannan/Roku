@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="sectionData" extends="ContentNode">
+	<interface>
+		<field id="contentTitle" type="string" value="Coentent Title" />
+		<field id="contentSecondaryTitle" type="string" value="Coentent Title" />
+		<field id="contentImagePath" type="string" value="pkg:/images/placeholder.png" />
+		<field id="contentDuration" type="string" value="00:40" />
+	</interface>
+</component>

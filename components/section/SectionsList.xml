@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SectionList" extends="RowList">
+	<script type="text/brightscript" uri="pkg:/components/section/SectionsList.brs" />
+</component>

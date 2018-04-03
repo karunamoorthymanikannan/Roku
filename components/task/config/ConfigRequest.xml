@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ConfigTask" extends="BaseAPI">
+	<script type="text/brightscript" uri="pkg:/components/task/config/ConfigRequest.brs" />
+</component>

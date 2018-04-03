@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SectionItem" extends="Group">
+	<interface>
+		<field id="itemContent" type="node" onChange="itemContentChanged" />
+		<field id="focusPercent" type="float" onChange="updateFocus" />
+		<field id="rowListHasFocus" type="boolean" alwaysNotify="true"
+			onChange="updateFocus" />
+		<field id="rowHasFocus" type="boolean" alwaysNotify="true" />
+		<field id="rowFocusPercent" type="float" onChange="updateFocus" />
+	</interface>
+	<script type="text/brightscript">
+	<![CDATA[ 
+		Function itemContentChanged() as void
+			itemData = m.top.itemContent	
+			m.contentImage.uri = itemData.contentImagePath	
+			m.contentImage.badgeContent = itemData.contentDuration	
+			m.contentTitle.text = itemData.contentTitle				
+		End function
+	  
+		Function init() as void 
+			m.contentImage = m.top.findNode("contentImage") 
+			m.contentTitle = m.top.findNode("contentTitle") 
+		End function
+		
+		Function updateFocus() As Void
+			m.contentImage.setFocus = m.top.focusPercent = 1 AND m.top.rowListHasFocus AND m.top.rowHasFocus
+		End Function
+	]]>
+	</script>
+
+	<children>
+		<NBCImageView id="contentImage" width="600" height="320"
+			loadWidth="600" loadHeight="320" loadDisplayMode="scaleToFill" />
+		<Label id="contentTitle" horizAlign="left" translation="[0,330]"
+			maxLines="2" wrap="true" lineSpacing="-2" width="600" color="0xFFFFFF">
+		</Label>
+	</children>
+</component>

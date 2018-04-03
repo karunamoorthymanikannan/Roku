@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="NBCImageView" extends="Poster">
+	<interface>
+		<field id="defaultPlaceHolder" type="string" alwaysNotify="true"
+			value="pkg:/images/placeholder.png" onChange="updateDefaultPlaceHolder" />
+		<field id="focusPercent" type="float" onChange="updateFocus" alwaysNotify="true" />
+		<field id="badgeContent" type="string" alwaysNotify="true"
+			value="" onChange="updateBadgeContent" />
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/widget/NBCImageView.brs" />
+
+	<children>
+		<Rectangle id="badgeContentBG" color="0x000000BC" width="120"
+			height="50" opacity="0.0" translation="[470,30]">
+			<Label height="50" vertAlign="center" id="badgeContent"
+				font="font:SmallestBoldSystemFont" horizAlign="center" width="120"
+				text="03:30" />
+		</Rectangle>
+	</children>
+</component>

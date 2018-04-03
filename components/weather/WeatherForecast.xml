@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WeatherForecast" extends="Group">
+	<interface>
+		<field id="updateData" type="node" alwaysNotify="true" onChange="updateFields" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/weather/WeatherForecast.brs" />
+	<children>
+		<Rectangle color="0xFF000020" width="160" height="400">
+			<LayoutGroup layoutDirection="vert" vertAlignment="top"
+				translation="[10,10]" itemSpacings="[0,10,12,12]">
+				<Label id="title" horizAlign="center" color="0xFFFFFF"
+					vertAlign="center" width="140" height="60" text="WED">
+					<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="34" />
+				</Label>
+				<Rectangle color="0xFFFFFF" width="140" height="2" />
+
+				<Poster id="iconImage" width="140" height="160" loadWidth="140"
+					loadHeight="160" uri="pkg:/images/placeholder.png" loadDisplayMode="scaleToFill" />
+
+				<Label id="tempHigh" horizAlign="center" width="140" color="0xFFFFFF"
+					text="43">
+					<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="64" />
+				</Label>
+				<Label id="tempLow" horizAlign="center" width="140" color="0xFFFFFF"
+					text="30">
+					<Font role="font" uri="pkg:/fonts/Roboto-Medium.ttf" size="32" />
+				</Label>
+			</LayoutGroup>
+
+		</Rectangle>
+	</children>
+</component>
+
